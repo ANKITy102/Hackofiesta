@@ -1,19 +1,27 @@
 
 header{
     background-color: white;
+    /* background: url("src/assets/images/footer.jpg") no-repeat; */
+    /* background-size: cover;
+    background-color: rgba(0, 0, 0, 0.5); */
     padding-left: 50px;
     padding-right: 50px;
     display: flex;
     direction: column;
     justify-content: space-between;
     align-items: center;
+    height: 80px;
+    width: 100%;
+    position: sticky;
+    top: 0;
 }
 
 header img{
-    width: 300px;
+    width: 250px;
 }
 
 header ul{
+    background-color: transparent;
     list-style-type: none;
     display: flex;
     direction: column;
