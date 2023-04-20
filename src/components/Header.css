@@ -10,12 +10,12 @@ header{
     direction: column;
     justify-content: space-between;
     align-items: center;
-    height: 12vh;
+    height: 11vh;
     width: 100%;
     position: sticky;
     top: 0;
    
-    box-shadow: 2px 2px 4px #634289 ;
+    box-shadow: 1px 1px 1px #634289 ;
 }
 
 header img{
@@ -30,9 +30,9 @@ header ul{
     justify-content: space-around;
     align-items: center;
     /* border: 1px solid #634289; */
-    width: 60%;
+    width: 50%;
     height: 50px;
-    font-size: 4vh;
+    font-size: 3.3vh;
     position: relative;
 }
 
