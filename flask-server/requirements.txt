@@ -1,0 +1,7 @@
+Flask==2.1.0
+scikit-learn
+numpy
+librosa
+pandas
+matplotlib
+seaborn
