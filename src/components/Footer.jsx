@@ -36,7 +36,8 @@ export default function Footer() {
         </div>
         <div className="line__separete"></div>
         <div className="by flex">
-            <p>Copyright © 2022 All Rights Reserved by Brayan Ospina.</p>
+            <p>Neural Ninjas</p>
+            <div></div>
             <div className="icons">
                 <a href="https://t.co/VBNNTjtw3F" className="icon1 icon--instagram">
                     <i className="ri-instagram-line"></i>
