@@ -5,7 +5,7 @@
   width: 100%;
   height: auto;
   background: url("src/assets/images/footer.jpg") no-repeat;
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: rgba(0, 0, 0, 0.2);
   background-size: cover;
   background-blend-mode: multiply;
    /* background-attachment:fixed ;
