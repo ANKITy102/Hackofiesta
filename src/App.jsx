@@ -1,8 +1,8 @@
 import { useState } from 'react'
 import Header from './components/Header'
 import Footer from './components/Footer'
+import MyForm from './components/MyForm'
 import Section from './components/Section'
-import Test from './components/Test'
 import './App.css'
 import {
   BrowserRouter as Router,
@@ -19,10 +19,8 @@ function App() {
       <Header />
       <Routes>
        <Route exact path="/" element={<Section/>}/>
-       <Route exact path="/Test" element={<Test/>}/>
-       </Routes>
-   
-      
+       <Route exact path="/Test" element={<MyForm />}/>
+      </Routes>
       <Footer />
     </div>
     </Router>
