@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import Header from './components/Header'
 import Footer from './components/Footer'
-import Section from './components/Section'
+// import MyForm from './components/MyForm'
 import './App.css'
 
 function App() {
@@ -10,7 +10,7 @@ function App() {
   return (
     <div>
       <Header />
-      <Section />
+      {/* <MyForm /> */}
       <Footer />
     </div>
   )
