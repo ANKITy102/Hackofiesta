@@ -62,7 +62,7 @@ import "./MyForm.css"
 const mimeType = "audio/webm";
 const AudioRecorder = () => {
 
-    const [permission, setPermission] = useState(false);
+    // const [permission, setPermission] = useState(false);
     const mediaRecorder = useRef(null);
     const [recordingStatus, setRecordingStatus] = useState("inactive");
     const [stream, setStream] = useState(null);
