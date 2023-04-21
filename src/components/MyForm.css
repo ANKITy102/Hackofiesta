@@ -9,3 +9,16 @@ form{
     justify-content: center;
     align-items: center;
 }
+.audio-controls{
+    width:100vh;
+    height: 50vh;
+    background-color: antiquewhite;
+}
+.btnStartRecording, .btnStopRecording{
+    margin: 50px;
+    color: white;
+    background-color: rgba(234,76,137,1);
+    padding: 20px 10px ;
+    font-size: 20px;
+    font-weight: bold;
+}

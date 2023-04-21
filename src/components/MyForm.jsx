@@ -58,6 +58,7 @@
 // }
 
 import { useState, useRef } from "react";
+import "./MyForm.css"
 const mimeType = "audio/webm";
 const AudioRecorder = () => {
 
@@ -67,7 +68,23 @@ const AudioRecorder = () => {
     const [stream, setStream] = useState(null);
     const [audioChunks, setAudioChunks] = useState([]);
     const [audio, setAudio] = useState(null);
-    const getMicrophonePermission = async () => {
+    // const getMicrophonePermission = async () => {
+    //     if ("MediaRecorder" in window) {
+    //         try {
+    //             const streamData = await navigator.mediaDevices.getUserMedia({
+    //                 audio: true,
+    //                 video: false,
+    //             });
+    //             setPermission(true);
+    //             setStream(streamData);
+    //         } catch (err) {
+    //             alert(err.message);
+    //         }
+    //     } else {
+    //         alert("The MediaRecorder API is not supported in your browser.");
+    //     }
+    // };
+    const startRecording = async () => {
         if ("MediaRecorder" in window) {
             try {
                 const streamData = await navigator.mediaDevices.getUserMedia({
@@ -82,8 +99,6 @@ const AudioRecorder = () => {
         } else {
             alert("The MediaRecorder API is not supported in your browser.");
         }
-    };
-    const startRecording = async () => {
       setRecordingStatus("recording");
       //create new Media recorder instance using the stream
       const media = new MediaRecorder(stream, { type: mimeType });
@@ -115,18 +130,18 @@ const AudioRecorder = () => {
     return (
       <>
       <div className="audio-controls">
-      {!permission ? (
+      {/* {!permission ? (
       <button onClick={getMicrophonePermission} type="button">
           Get Microphone
       </button>
-      ) : null}
-      {permission && recordingStatus === "inactive" ? (
-      <button onClick={startRecording} type="button">
+      ) : null} */}
+      { recordingStatus === "inactive" ? (
+      <button onClick={startRecording} type="button" className="btnStartRecording">
           Start Recording
       </button>
       ) : null}
       {recordingStatus === "recording" ? (
-      <button onClick={stopRecording} type="button">
+      <button onClick={stopRecording} type="button" className="btnStopRecording">
           Stop Recording
       </button>
       ) : null}
