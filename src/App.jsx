@@ -21,8 +21,6 @@ function App() {
        <Route exact path="/" element={<Section/>}/>
        <Route exact path="/Test" element={<MyForm />}/>
       </Routes>
-   
-      
       <Footer />
     </div>
     </Router>
