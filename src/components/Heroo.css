@@ -1,4 +1,7 @@
 .Heroo{
     height: 50vh;
     width: 100vw;
+  background: url("../assets/images/2.png") no-repeat;
+  background-size: contain;
+  background-position: 85%;
 }

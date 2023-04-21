@@ -27,15 +27,6 @@ export default function Header() {
     }
   }
  
-  useEffect(() => {
-    
-    const handleClick = (event) => {
-      // console.log(event.target,confirmation)
-      if (isOpen===1 && event.target!=document.getElementById("nav-icon1")) {
-        toggleMenu();
-      }
-    };
-    window.addEventListener('click', handleClick);},[])
   return (
     <>
     <header>
