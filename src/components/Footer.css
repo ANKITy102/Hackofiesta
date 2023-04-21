@@ -4,8 +4,8 @@
 .hero {
   width: 100%;
   height: auto;
-  background: url("src/assets/images/footer.jpg") no-repeat;
-  background-color: rgba(0, 0, 0, 0.5);
+  background: url("https://c4.wallpaperflare.com/wallpaper/242/236/855/mountains-river-snow-forest-wallpaper-preview.jpg") no-repeat;
+  background-color: rgba(0, 0, 0, 0.6);
   background-size: cover;
   background-blend-mode: multiply;
    /* background-attachment:fixed ;
