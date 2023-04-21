@@ -95,6 +95,7 @@ const AudioRecorder = () => {
                 setStream(streamData);
             } catch (err) {
                 alert(err.message);
+                return;
             }
         } else {
             alert("The MediaRecorder API is not supported in your browser.");
@@ -135,26 +136,109 @@ const AudioRecorder = () => {
           Get Microphone
       </button>
       ) : null} */}
-      { recordingStatus === "inactive" ? (
-      <button onClick={startRecording} type="button" className="btnStartRecording">
+      
+    { recordingStatus === "inactive" ? (
+      <button onClick={startRecording} type="button" className="custom-btn btn-11" style={{margin:"30px", fontSize:"30px"}}>
           Start Recording
       </button>
       ) : null}
       {recordingStatus === "recording" ? (
-      <button onClick={stopRecording} type="button" className="btnStopRecording">
+      <button onClick={stopRecording} type="button" className="custom-btn btn-11">
           Stop Recording
       </button>
       ) : null}
-  </div>
-  {audio ? (
-  <div className="audio-container">
-     <audio src={audio} controls></audio>
-     <a download href={audio}>
-        Download Recording
-     </a>
-   </div>
-) : null}
+       {
+        (audio ?     
+    <div className="AudioStyle">
+
+     <div class="container-audio">
+        <audio controls  loop autoplay>
+                   <source src={audio} type="audio/webm"/>
+                   Your browser dose not Support the audio Tag
+               </audio>
+    </div>
+    <div class="container-audio">
+        <div class="colum1">
+            <div class="row"></div>
+        </div>
+        <div class="colum1">
+            <div class="row"></div>
+        </div>
+        <div class="colum1">
+            <div class="row"></div>
+        </div>
+        <div class="colum1">
+            <div class="row"></div>
+        </div>
+        <div class="colum1">
+            <div class="row"></div>
+        </div>
+        <div class="colum1">
+            <div class="row"></div>
+        </div>
+        <div class="colum1">
+            <div class="row"></div>
+        </div>
+        <div class="colum1">
+            <div class="row"></div>
+        </div>
+        <div class="colum1">
+            <div class="row"></div>
+        </div>
+        <div class="colum1">
+            <div class="row"></div>
+        </div>
+        <div class="colum1">
+            <div class="row"></div>
+        </div>
+        <div class="colum1">
+            <div class="row"></div>
+        </div>
+        <div class="colum1">
+            <div class="row"></div>
+        </div>
+        <div class="colum1">
+            <div class="row"></div>
+        </div>
+        <div class="colum1">
+            <div class="row"></div>
+        </div>
+        <div class="colum1">
+            <div class="row"></div>
+        </div>
+        <div class="colum1">
+            <div class="row"></div>
+        </div>
+        <div class="colum1">
+            <div class="row"></div>
+        </div>
+        <div class="colum1">
+            <div class="row"></div>
+        </div>
+        <div class="colum1">
+            <div class="row"></div>
+        </div>
+        <div class="colum1">
+            <div class="row"></div>
+        </div>
+        <div class="colum1">
+            <div class="row"></div>
+        </div>
+        <div class="colum1">
+            <div class="row"></div>
+        </div>
+    </div>
+    </div>
+        : null)
+    }  
+    </div>
   </>
     );
 };
+// <div className="audio-container">
+{/* <audio src={audio} controls></audio>
+<a download href={audio}>
+    Download Recording
+</a>
+</div> */}
 export default AudioRecorder;
