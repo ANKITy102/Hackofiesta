@@ -1,10 +1,13 @@
 import React from 'react'
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import "./Header.css"
 import { Link } from 'react-router-dom'
 export default function Header() {
   const [width, setWidth]=useState('0')
   const [opacity, setOpacity]=useState('0')
+  const [isOpen, setIsOpen]=useState(0);
+
+
   const toggleMenu=()=>{
     document.getElementById('nav-icon1').classList.toggle('open')
     if(width=='0'){
@@ -13,14 +16,26 @@ export default function Header() {
       
       setWidth('100vw')
       setOpacity('1')
+      setIsOpen(1);
     }
     else{
       setWidth('0');
       setOpacity('0')
+      setIsOpen(0);
       document.body.style.height="fit-content"
       document.body.style.overflowY="auto"
     }
   }
+ 
+  useEffect(() => {
+    
+    const handleClick = (event) => {
+      // console.log(event.target,confirmation)
+      if (isOpen===1 && event.target!=document.getElementById("nav-icon1")) {
+        toggleMenu();
+      }
+    };
+    window.addEventListener('click', handleClick);},[])
   return (
     <>
     <header>
