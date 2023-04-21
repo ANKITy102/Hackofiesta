@@ -1,4 +1,32 @@
-.section{
+.main_section{
     width: 100vw;
-    height: 100vh;
+    height: 89vh;
+    background-color: #c19de7;
+    display: flex;
+    flex-direction: row;
+}
+.leftSection{
+    width: 55%;
+    height: 88%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.7vw;
+    font-family: sans-serif;
+}
+.leftSection p{
+    padding: 20px;
+    text-align: center;
+    font-size: 1.7vw;
+    font-family: sans-serif;
+}
+.leftSection_head{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.9vw;
+    font-family: sans-serif;
+    font-weight: bolder;
 }
