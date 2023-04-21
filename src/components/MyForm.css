@@ -1,0 +1,11 @@
+form{
+    height: 80vh;
+    width: 80vw;
+    margin: 0 auto;
+    padding-top: 10vh;
+    background-color: aquamarine;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}

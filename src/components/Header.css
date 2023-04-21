@@ -148,6 +148,8 @@ header a:hover:before, header a:hover:after
 .sideMenu{
   display: none;
  overflow: hidden;
+ position: fixed;
+ top: 11vh;
   background: rgba(227,212,240,0.7) ;
   /* background:#e3d4f0 ; */
   height: 100vh;
