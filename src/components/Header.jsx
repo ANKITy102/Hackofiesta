@@ -32,13 +32,10 @@ export default function Header() {
     <header>
       <img src="src\assets\images\tp-removebg-preview.png" alt="myLogo" />
       <ul>
-        <li className="navbarLink"><Link to="/">
-          <div style={{textAlign:"center"}}><i className="fa-solid fa-house"></i></div> Home</Link></li>
-        <li className="navbarLink"><Link to="/background">
-        <div style={{textAlign:"center"}}><i className="fa-solid fa-chart-simple"></i></div>Background</Link></li>
-        <li className="navbarLink"><Link to="/About">
-        <div style={{textAlign:"center"}}> <i className="fa-solid fa-circle-info"></i> </div> 
-          About</Link></li>
+        <li className="navbarLink"><Link to="/">Home</Link></li>
+        <li className="navbarLink"><Link to="/Test">Test</Link></li>
+        <li className="navbarLink"><Link to="/Background">Background</Link></li>
+        <li className="navbarLink"><Link to="/About">About</Link></li>
         <div id="nav-icon1" onClick={toggleMenu}>
           <span></span>
           <span></span>
@@ -50,9 +47,10 @@ export default function Header() {
     </header>
     <div className="sideMenu" style={{width : `${width}`}}>
           <ul>
-            <li><Link to="/" style={{textDecoration: "none"}}><i className="fa-solid fa-house" ></i> Home</Link> </li>
-            <li><Link to="/background" style={{textDecoration: "none"}}><i className="fa-solid fa-chart-simple" ></i> Background</Link></li>
-            <li><Link to="/About" style={{textDecoration: "none"}}><i className="fa-solid fa-circle-info" ></i> About</Link> </li>
+            <li><Link to="/" style={{textDecoration: "none"}}>Home</Link> </li>
+            <li><Link to="/Test" style={{textDecoration: "none"}}>Test</Link></li>
+            <li><Link to="/Background" style={{textDecoration: "none"}}>Background</Link></li>
+            <li><Link to="/About" style={{textDecoration: "none"}}>About</Link> </li>
           </ul>
       </div>
     </>
