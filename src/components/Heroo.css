@@ -91,7 +91,7 @@
 }
 
 @media all and (max-width: 685px){
-  .Heroo{
+  .heroo{
     flex-direction: column-reverse;
   }
   .heroo--text{
