@@ -15,7 +15,7 @@ export default function Heroo() {
         <img className="heroo--img" src="src\assets\images\hero_doctor.png" alt="HeroDoctor" />
       </div>
     </div>
-    <div className="Heroo--bottom">Our AI-based Parkinson's detection website utilizes advanced machine learning techniques to analyze Voice features and accurately identify early-stage symptoms of the disease, allowing for early intervention and improved patient outcomes.</div>
+    <div className="heroo--bottom">Our AI-based Parkinson's detection website utilizes advanced machine learning techniques to analyze Voice features and accurately identify early-stage symptoms of the disease, allowing for early intervention and improved patient outcomes.</div>
     </>
   )
 }
