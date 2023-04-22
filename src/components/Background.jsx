@@ -1,9 +1,5 @@
-import React from 'react'
+import React from "react";
 
 export default function Background() {
-  return (
-    <div>
-      Background
-    </div>
-  )
+  return <div>Background</div>;
 }
