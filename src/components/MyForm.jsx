@@ -1,4 +1,5 @@
 import { useState, useRef } from "react";
+import { saveAs } from "file-saver";
 import "./MyForm.css";
 const mimeType = "audio/mpeg";
 const AudioRecorder = () => {
@@ -13,21 +14,23 @@ const AudioRecorder = () => {
   const handleSubmit = async (event) => {
     event.preventDefault();
     console.log("hello");
-    console.log(file);
-    if (file === null) {
-      return;
-    }
+    // console.log(file);
+    // if (file === null) {
+    //   return;
+    // }
 
-    let formData = new FormData();
-    formData.append("files", reccordeddBob);
-    let outcome = await fetch("http://localhost:5000/predict", {
-      method: "POST",
-      headers: {
-        "Access-Control-Allow-Origin": "*",
-      },
-      body: formData,
-    });
-    console.log(outcome);
+    // let formData = new FormData();
+    // formData.append("files", reccordeddBob);
+    // let outcome = await fetch("http://localhost:5000/predict", {
+    //   method: "POST",
+    //   headers: {
+    //     "Access-Control-Allow-Origin": "*",
+    //   },
+    //   body: formData,
+    // });
+    let outcome = await fetch("http://localhost:5000/predict");
+    let data = await outcome.json();
+    console.log(data);
   };
   const startRecording = async () => {
     setAudio(null);
@@ -73,6 +76,8 @@ const AudioRecorder = () => {
       setAudioChunks([]);
       setRecordedBlob(audioBlob);
       setFile(audioUrl);
+      // const filePath = "temp.mpeg";
+      saveAs(audioBlob, "temp.mpeg");
     };
   };
   // const handleSubmit=()=>{
@@ -134,7 +139,7 @@ const AudioRecorder = () => {
             {audio ? (
               <div className="AudioStyle">
                 <div className="container-audio">
-                  <audio controls loop autoplay>
+                  <audio controls loop autoPlay>
                     <source src={audio} type="audio/webm" />
                     Your browser dose not Support the audio Tag
                   </audio>
