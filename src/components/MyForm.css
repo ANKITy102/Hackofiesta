@@ -1,27 +1,4 @@
-form{
-    height: 80vh;
-    width: 80vw;
-    margin: 0 auto;
-    padding-top: 10vh;
-    background-color: aquamarine;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
 
-/* .btnStartRecording, .btnStopRecording{
-     margin: 50px 20px; 
-    margin-top: 30px;
-    color: white;
-    background-color: rgba(234,76,137,1);
-    padding: 20px 10px ;
-    font-size: 20px;
-    font-weight: bold;
-    border: none;
-    border-radius: 20px;
-    box-shadow: 1px 1px 5px rgb(36, 1, 14);
-} */
 .custom-btn {
     color: #fff;
     text-decoration: none;
@@ -85,10 +62,25 @@ form{
 
 
 
-/* audio styling */
+/* audio sctyling */
+.audio-controls{
+    height: 89vh;
+}
+.sideAudioCont{
+    width: 50%;
+    height: 90%;
+    display: flex;
+    flex-direction: colomn;
+    justify-content: center;
+    align-items: center;
+}
+
 .AudioStyle{
-    width: 40%;
     padding-left: 30px;
+    
+}
+.audioCenter{
+    width: 80%;
 }
 .container-audio {
     width: 100%;
