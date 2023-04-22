@@ -26,16 +26,88 @@
   height: 100%;
   transform: translate(-5%,-5%);
 }
-@media all and (max-width: 704px){
+.heroo--custom-btn {
+  transform: translate(20%,120%);
+  color: #fff;
+  text-decoration: none;
+  border-radius: 5px;
+  padding: 10px 40px;
+  border-radius: 36px;
+  font-family: 'Lato', sans-serif;
+  font-weight: 500;
+  background: transparent;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+  display: inline-block;
+  box-shadow:inset 2px 2px 2px 0px rgba(255,255,255,.5),
+ 7px 7px 20px 0px rgba(0,0,0,.1),
+ 4px 4px 5px 0px rgba(0,0,0,.1);
+  outline: none;
+  font-size: 32px;
+}
+.heroo--btn-11 {
+  border: none;
+  background: #5E00C0;
+  background: linear-gradient(0deg, #5E00C0 0%, #7326c4 100%);
+    color: #fff;
+    overflow: hidden;
+}
+.heroo--btn-11:hover {
+    text-decoration: none;
+    color: #fff;
+}
+.heroo--btn-11:before {
+    position: absolute;
+    content: '';
+    display: inline-block;
+    top: -180px;
+    left: 0;
+    width: 30px;
+    height: 100%;
+    background-color: #fff;
+    animation: shiny-btn1 3s ease-in-out infinite;
+}
+.heroo--btn-11:hover{
+  opacity: .7;
+}
+.heroo--btn-11:active{
+  box-shadow:  4px 4px 6px 0 rgba(255,255,255,.3),
+              -4px -4px 6px 0 rgba(116, 125, 136, .2), 
+    inset -4px -4px 6px 0 rgba(255,255,255,.2),
+    inset 4px 4px 6px 0 rgba(0, 0, 0, .2);
+}
+@-webkit-keyframes shiny-btn1 {
+    0% { -webkit-transform: scale(0) rotate(45deg); opacity: 0; }
+    80% { -webkit-transform: scale(0) rotate(45deg); opacity: 0.5; }
+    81% { -webkit-transform: scale(4) rotate(45deg); opacity: 1; }
+    100% { -webkit-transform: scale(50) rotate(45deg); opacity: 0; }
+}
+.Heroo--bottom{
+  margin: 80px 3%;
+  color: #C19DE7;
+  font-size: 2.4vw;
+  
+}
+
+@media all and (max-width: 700px){
   .Heroo{
     flex-direction: column-reverse;
   }
-.heroo--text{
+  .heroo--text{
     width: 100%;
     height: 50%;
   }
-.heroo--imgdiv{
+  .heroo--imgdiv{
     width: 60%;
     height: 50%;
+  }
+  .heroo--custom-btn {
+    transform: translate(25%,60%);
+    padding: 6px 24px;
+    margin: auto;
+  }
+  .Heroo--bottom{
+    font-size: 16px; 
   }
 }
