@@ -1,4 +1,4 @@
-.Heroo{
+.heroo{
     height: 80vh;
     width: 100vw;
     display: flex;
@@ -83,7 +83,7 @@
     81% { -webkit-transform: scale(4) rotate(45deg); opacity: 1; }
     100% { -webkit-transform: scale(50) rotate(45deg); opacity: 0; }
 }
-.Heroo--bottom{
+.heroo--bottom{
   margin: 80px 3%;
   color: #C19DE7;
   font-size: 2vw;
@@ -107,7 +107,7 @@
     padding: 6px 24px;
     margin-right: auto;
   }
-  .Heroo--bottom{
+  .heroo--bottom{
     font-size: 16px; 
   }
 }

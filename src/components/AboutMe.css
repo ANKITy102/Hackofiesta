@@ -1,0 +1,35 @@
+.aboutme{
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 500px;
+    overflow: hidden;
+}
+.aboutme--img{
+    width: 200px;
+}
+.aboutme--text{
+    width: 250px;
+}
+.aboutme--text h2{
+    color:#7A36C1;
+    font-weight: 500;
+}
+@media all and (max-width: 730px){
+    .aboutme{
+        margin-bottom: 25px;
+    }
+}
+@media all and (max-width: 490px){
+    .aboutme{
+        margin-bottom: 25px;
+        width: 300px;
+    }
+    .aboutme--img{
+        width: 100px;
+    }
+    .aboutme--text{
+        width: 180px;
+        font-size: 12px;
+    }
+}

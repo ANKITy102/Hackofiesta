@@ -5,7 +5,11 @@ import { Link } from "react-router-dom";
 export default function Background() {
   return (
     <>
+<<<<<<< HEAD
       <div className="background1">
+=======
+      <div className='background1' id="Background">
+>>>>>>> 8db09a7bca054ae32204b4dc3c081612b1b08387
         <div className="bg1--e1">
           <img
             className="bg1--e1--p1"

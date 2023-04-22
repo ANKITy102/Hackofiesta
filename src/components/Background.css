@@ -137,34 +137,34 @@
         font-size: 44px;
         text-align: center;
     }
-  .bg2--e1{
-      flex-direction: column-reverse;
-  }
-  .bg2--e1--speach{
-      width: 100%;
-      align-self: flex-start;
-      text-align: right;
-      text-align: center;
-  }
-  .bg2--e1--speach{
-      font-size: 18px;
-  }
-  .bg2--e1--p2{
-    width: 100%;
-    height: auto;
-  }
-  .bg2--e2{
-      width: 100%;
-      text-align: center;   
-      margin-left: 0;
-      margin-bottom: 50px; 
-  }
-  .bg2--e2 span{
-      font-size: 16px;
-  }
-  .bg2--e2 h2{
-      font-size: 24px;
-  }
+    .bg2--e1{
+        flex-direction: column-reverse;
+    }
+    .bg2--e1--speach{
+        width: 100%;
+        align-self: flex-start;
+        text-align: right;
+        text-align: center;
+    }
+    .bg2--e1--speach{
+        font-size: 18px;
+    }
+    .bg2--e1--p2{
+        width: 100%;
+        height: auto;
+    }
+    .bg2--e2{
+        width: 100%;
+        text-align: center;   
+        margin-left: 0;
+        margin-bottom: 50px; 
+    }
+    .bg2--e2 span{
+        font-size: 16px;
+    }
+    .bg2--e2 h2{
+        font-size: 24px;
+    }
 }
 
 .bg--custom-btn {

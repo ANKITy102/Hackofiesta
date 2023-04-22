@@ -11,6 +11,7 @@ footer{
   flex-direction: column;
   justify-content: flex-start;
   align-items: start;
+  overflow: hidden;
 }
 .footer--parts{
   display: flex;
@@ -164,7 +165,7 @@ footer{
   }
   .footer--logo{
     margin: 0 auto;
-    width: 90vw;
+    width: 270px;
   }
   .footer--part1{
     font-size: 14px;
