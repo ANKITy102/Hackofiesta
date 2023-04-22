@@ -7,7 +7,7 @@ import { Link } from 'react-router-dom'
 export default function Background() {
   return (
     <>
-      <div className='background1'>
+      <div className='background1' id="Background">
         <div className="bg1--e1">
           <img className="bg1--e1--p1" src="src\assets\images\bg1_img.png" alt="" />
           <div className="bg1--e1--speach">

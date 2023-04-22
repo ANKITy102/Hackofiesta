@@ -3,6 +3,7 @@ import Header from './components/Header'
 import Heroo from './components/Heroo'
 import Footer from './components/Footer'
 import Background from './components/Background'
+import About from './components/About'
 
 import {
   BrowserRouter as Router,
@@ -19,6 +20,7 @@ function App() {
       <Header />
       <Heroo />
       <Background />
+      <About />
       <Footer />
     </div>
     </Router>

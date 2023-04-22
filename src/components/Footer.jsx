@@ -9,7 +9,7 @@ export default function Footer() {
         <img className='footer--logo' src="src\assets\images\footer_logo.png" alt="white_PDetect_logo" />       
         <div className="footer--parts">
             <div className="footer--part1">
-                The sun shone brightly in the cloudless sky as I walked along the dirt path that wound its way through the lush green forest. Birds chirped happily in the trees above, and a gentle breeze rustled the leaves. 
+            Produce a machine learning model to diagnose Parkinson’s disease given various features of a patient's speech with at least 90% accuracy and/or a Matthews Correlation Coefficient of at least 0.9. 
             </div>
             <div className="footer--part2">
                 <ul>
