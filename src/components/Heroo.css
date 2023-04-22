@@ -86,11 +86,11 @@
 .Heroo--bottom{
   margin: 80px 3%;
   color: #C19DE7;
-  font-size: 2.4vw;
+  font-size: 2vw;
   
 }
 
-@media all and (max-width: 700px){
+@media all and (max-width: 685px){
   .Heroo{
     flex-direction: column-reverse;
   }
@@ -103,9 +103,9 @@
     height: 50%;
   }
   .heroo--custom-btn {
-    transform: translate(25%,60%);
+    transform: translate(50%,80%);
     padding: 6px 24px;
-    margin: auto;
+    margin-right: auto;
   }
   .Heroo--bottom{
     font-size: 16px; 

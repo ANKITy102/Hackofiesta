@@ -2,7 +2,7 @@ import { useState } from 'react'
 import Header from './components/Header'
 import Heroo from './components/Heroo'
 import Footer from './components/Footer'
-import Section from './components/Section'
+import Background from './components/Background'
 
 import {
   BrowserRouter as Router,
@@ -18,6 +18,7 @@ function App() {
     <div>
       <Header />
       <Heroo />
+      <Background />
       <Footer />
     </div>
     </Router>
