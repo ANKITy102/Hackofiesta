@@ -4,8 +4,6 @@ import "./Header.css"
 import { Link } from 'react-router-dom'
 export default function Header() {
   const [width, setWidth]=useState('0')
-  const [opacity, setOpacity]=useState('0')
-  const [isOpen, setIsOpen]=useState(0);
 
 
   const toggleMenu=()=>{
