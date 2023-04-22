@@ -1,58 +1,40 @@
 import React from 'react'
 import "./Footer.css"
+import { Link } from 'react-router-dom'
+
 
 export default function Footer() {
   return (
-      <footer className="hero">
-        <div className="container flex">
-            <div className="container__about">
-                <h2>About</h2>
-                <p>A young software developer, starting his professional life, learning the most used languages in this
-                    industry, PYTHON, C++, HTML, CSS and JAVASCRIPT.</p>
+    <footer>
+        <img className='footer--logo' src="src\assets\images\footer_logo.png" alt="white_PDetect_logo" />       
+        <div className="footer--parts">
+            <div className="footer--part1">
+                The sun shone brightly in the cloudless sky as I walked along the dirt path that wound its way through the lush green forest. Birds chirped happily in the trees above, and a gentle breeze rustled the leaves. 
             </div>
-            <div className="container-pages flex">
-
-                <div className="container__recentpages">
-                    <h2>Recient Pages</h2>
-                    <ul>
-                        <li><a href="https://brayancountries.netlify.app">Countries</a></li>
-                        <li><a href="https://portfolio-brayan.netlify.app/">Portfolio</a></li>
-                        <li><a href="https://cartagena-cooks.netlify.app/">Cartagena-cooks</a></li>
-                        <li><a href="https://work-company.netlify.app/">Work-company</a></li>
-                    </ul>
-                </div>
-                <div className="container__more">
-                    <h2>Recient Pages</h2>
-                    <ul>
-                        <li><a href="https://challenge2-bom.netlify.app/">Challenge2</a></li>
-                        <li><a href="https://challenge3-brayanom.netlify.app/">Challenge3</a></li>
-                        <li><a href="https://dev4-brayanom.netlify.app/">Challenge4</a></li>
-                        <li><a href="https://cv-brayanom.netlify.app/">Curriculum</a></li>
-                        <li><a href="https://mentor1-brayanom.netlify.app/">Mentor1</a></li>
-                    </ul>
-
-                </div>
+            <div className="footer--part2">
+                <ul>
+                    <li className="footer-links"><Link to="/">Home</Link></li>
+                    <li className="footer-links"><Link to="/Test">Test</Link></li>
+                    <li className="footer-links"><Link to="/Background">Background</Link></li>
+                    <li className="footer-links"><Link to="/About">About</Link></li>
+                </ul>
             </div>
+            <img className='neural_ninjas' src="src\assets\images\neural_ninja.png" alt="neural_ninjas" />
         </div>
-        <div className="line__separete"></div>
-        <div className="by flex">
-            <p>Neural Ninjas</p>
-            <div></div>
-            <div className="icons">
-                <a href="https://t.co/VBNNTjtw3F" className="icon1 icon--instagram">
-                    <i className="ri-instagram-line"></i>
-                </a>
-                <a href="#" className="icon1 icon--twitter">
-                    <i className="ri-twitter-line"></i>
-                </a>
-                <a href="linkedin.com/in/brayan-ospina-8bb472243" className="icon1 icon--linkedin">
-                    <i className="ri-linkedin-line"></i>
-                </a>
-                <a href="https://github.com/brayanospina2005/final-project" className="icon1 icon--github">
-                    <i className="ri-github-line"></i>
-                </a>
-            </div>
-        </div>
+                <div className="icons">
+                    <a href="https://t.co/VBNNTjtw3F" className="icon1 icon--instagram">
+                        <i className="ri-instagram-line"></i>
+                    </a>
+                    <a href="https://twitter.com/ParkinsonDotOrg" className="icon1 icon--twitter">
+                        <i className="ri-twitter-line"></i>
+                    </a>
+                    <a href="https://en.wikipedia.org/wiki/Parkinson%27s_disease" className="icon1 icon--wikipedia">
+                    <i className="fa-brands fa-wikipedia-w"></i>
+                    </a>
+                    <a href="https://github.com/ANKITy102/Hackofiesta" className="icon1 icon--github">
+                        <i className="ri-github-line"></i>
+                    </a>
+                </div> 
     </footer>
   )
 }
