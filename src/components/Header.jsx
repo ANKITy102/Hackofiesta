@@ -20,6 +20,13 @@ export default function Header() {
       document.body.style.overflowY="auto"
     }
   }
+  const toggleMenu2=()=>{
+    document.getElementById('nav-icon1').classList.toggle('open')
+      setWidth('0');
+      document.body.style.height="normal"
+      document.body.style.overflowY="auto"
+      window.scrollTo(0,0); 
+  }
  
   return (
     <>
@@ -28,7 +35,7 @@ export default function Header() {
       <ul>
         <li className="navbarLink"><Link to="/">Home</Link></li>
         <li className="navbarLink"><Link to="/Test">Test</Link></li>
-        <li className="navbarLink"><Link to="/Background">Background</Link></li>
+        <li className="navbarLink"><Link to="/Background" smooth>Background</Link></li>
         <li className="navbarLink"><Link to="/About">About</Link></li>
         <div id="nav-icon1" onClick={toggleMenu}>
           <span></span>
@@ -41,10 +48,10 @@ export default function Header() {
     </header>
     <div className="sideMenu" style={{width : `${width}`}}>
           <ul>
-            <li><Link to="/" style={{textDecoration: "none"}}>Home</Link> </li>
-            <li><Link to="/Test" style={{textDecoration: "none"}}>Test</Link></li>
-            <li><Link to="/Background" style={{textDecoration: "none"}}>Background</Link></li>
-            <li><Link to="/About" style={{textDecoration: "none"}}>About</Link> </li>
+            <li><Link to="/" onClick={toggleMenu2} style={{textDecoration: "none"}}>Home</Link> </li>
+            <li><Link to="/Test" onClick={toggleMenu2} style={{textDecoration: "none"}}>Test</Link></li>
+            <li><Link to="/Background" onClick={toggleMenu2} style={{textDecoration: "none"}}>Background</Link></li>
+            <li><Link to="/About" onClick={toggleMenu2} style={{textDecoration: "none"}}>About</Link> </li>
           </ul>
       </div>
     </>
