@@ -1,0 +1,66 @@
+.Test{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.Test .instruction{
+    width: 40%;
+    position: relative;
+}
+.Test .instruction h2{
+    width: 80%;
+    margin: 0px auto;
+    text-align: center;
+    border: 2px solid #8158AC;
+    color: #8158AC;
+    font-size:32px;
+    font-weight:500;
+    border-radius: 40px;
+
+}
+.Test .instruction h2 i{
+    color: #F5CC39;
+}
+.Test .audiopart{
+    width: 400px;
+    height: 300px;
+    border: 2px solid #8158AC;
+    border-radius: 40px 40px 0 0;
+    position: relative;
+}
+.Test .audiopart button{
+    background-color: #F5CC39;
+    height: 30px;
+    color: white;
+    width: 100%;
+    border: 2px solid #F5CC39;
+    position: absolute;
+    bottom: -30px;
+    left: -2px;
+    border-radius: 0 0 40px 40px;
+    box-sizing: content-box;
+}
+.Test .instruction p{
+    color: #A67AD6;
+    margin: 50px;
+}
+@media all and (max-width: 704px){
+    .Test{
+        flex-direction: column;
+    }
+    .Test .instruction{
+        width: 80%;
+        margin: 0 auto;
+    }
+    .Test .audiopart{
+        width: 80%;
+        margin-bottom: 50px;
+    }
+}
+@media all and (max-width: 400px){
+    
+    .Test .instruction{
+        width: 100%;
+        margin: 0;
+    }
+}

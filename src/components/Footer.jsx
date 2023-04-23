@@ -22,9 +22,6 @@ export default function Footer() {
             <img className='neural_ninjas' src="src\assets\images\neural_ninja.png" alt="neural_ninjas" />
         </div>
                 <div className="icons">
-                    <a href="https://t.co/VBNNTjtw3F" className="icon1 icon--instagram">
-                        <i className="ri-instagram-line"></i>
-                    </a>
                     <a href="https://twitter.com/ParkinsonDotOrg" className="icon1 icon--twitter">
                         <i className="ri-twitter-line"></i>
                     </a>

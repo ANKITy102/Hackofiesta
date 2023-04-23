@@ -1,149 +1,102 @@
-.testFormContainer{
-    width: 38%;
-    height: 75vh;
-    background-color: #c19de7;
-    border: 1.5px solid #210242;
-    border-radius: 40px;
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 11vh;
+.testform{
+  width: 600px;
+  height: 80vh;
+  background-color: #C19DE7;
+  margin: 50px auto;
+  color: #FFFFFF;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  font-size: 24px;
+  position: relative;
+}
+.testform .Name,
+.testform .Age{
+  font-size: 24px;
+  width: 80%;
+  height: 40px;
+  border: none;
+  color: #ffffffce;
+  background-color: #C19DE7;
+  border-bottom: 2px solid white;
+  transition: all 0.15s;
+  box-sizing: border-box;
+}
+.testform button{
+  color: #C19DE7;
+  background-color: #FFFFFF;
+  border: none;
+  width: 150px;
+  height: 40px;
+  border-radius: 16px;
+  font-size: 18px;
+}
+.testform .Name:focus,
+.testform .Age:focus {
+  outline: none;
+  color: #ffffff;
+  border-bottom: 4px solid white;
+}
+.testform .Gender{
+  border-bottom: 2px solid white;
+  width: 80%;
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+}
+.testform .Gender input[type='radio']:checked{
+  accent-color: #7917e3;
+}
+.testform input::placeholder{
+  color: #FFFFFF;
+}
+.testform .Gender label{
+  padding: 2px 8px;
+  border-radius: 16px;
+  font-size: 18px;
+}
+.testform .Gender label:hover{
+  background-color: #8c74a4;
+}
+@media all and (max-width: 685px){
+  .testform{
+    width: 350px;
+    height: 80vh;
+    font-size: 18px;
+  }
+  .testform .Name,
+  .testform .Age{
+    font-size: 18px;
+    width: 80%;
+    height: 40px;
+  }
+  .testform button{
+    width: 150px;
+    height: 40px;
+    font-size: 18px;
+  }
+  .testform .Gender{
+    border-bottom: 2px solid white;
+    width: 80%;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+  .testform .Gender label{
+    padding: 2px 8px;
+    border-radius: 16px;
+    font-size: 14px;
+  }
+  .testform .sex{
     display: flex;
     flex-direction: column;
-    /* padding-right: 70px; */
-    justify-content: space-evenly;
-    align-items: center;
+  }
 }
-
-/* .testForm */
-.testFormName, .testFormAge, .testFormGender{
-    width: 80%;
-    border-bottom: 2px solid white;
-
+@media all and (max-width: 351px){
+  .testform{
+    width: 100%;
+    height: 80vh;
+    font-size: 18px;
+  }
 }
-.testFormName input, .testFormAge input{
-    background-color: #c19de7;
-    height: 40px;
-    font-family: 'Poppins';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 29.6832px;
-    border: none;
-    outline: none;
-/* line-height: 45px; */
-/* text-align: center; */
-    color: white;
-    /* padding-left: 10px; */
-}
-.testFormGender{
-    display: flex;
-    justify-content: space-between;
-    border-bottom: 2px solid white;
-    align-items: center;
-}
-::placeholder{
-    color: white;
-}
-
-.testFormButton button{
-    width: 227px;
-    height: 60px;
-     border-radius: 24px;
-     border: none;
-     color:#8158Ac;
-     background-color: white;
-     font-size: 29.68px;
-}
-.testFormGender .genderRadioButton{
-    width: 60%;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-}
-
-.testFormGender .testFormGender1{
-    font-size: 29.68px;
-    color: white;
-    font-size: 29.68px;
-    font-family: 'Poppins';
-    font-style: normal;
-    font-weight: 400;
-}
-
-.rad-label {
-    display: flex;
-    align-items: center;
-  
-    border-radius: 100px;
-    padding: 14px 16px;
-    margin: 10px 0;
-  
-    cursor: pointer;
-    transition: .3s;
-  }
-  
-  .rad-label:hover,
-  .rad-label:focus-within {
-    background: hsla(0, 0%, 80%, .14);
-  }
-  
-  .rad-input {
-    position: absolute;
-    left: 0;
-    top: 0;
-    width: 1px;
-    height: 1px;
-    opacity: 0;
-    z-index: -1;
-  }
-  
-  .rad-design {
-    width: 22px;
-    height: 22px;
-    border-radius: 100px;
-  
-    background: linear-gradient(91.31deg, #5E00C0 0.56%, #A67AD6 101.54%);
-    position: relative;
-  }
-  
-  .rad-design::before {
-    content: '';
-  
-    display: inline-block;
-    width: inherit;
-    height: inherit;
-    border-radius: inherit;
-  
-    background: hsl(0, 0%, 90%);
-    transform: scale(1.1);
-    transition: .3s;
-  }
-  
-  .rad-input:checked+.rad-design::before {
-    transform: scale(0);
-  }
-  
-  .rad-text {
-    color: white;
-    margin-left: 14px;
-    font-size: 25px;
-    font-family: 'Poppins';
-    font-style: normal;
-    font-weight: 400;
-  
-    transition: .3s;
-  }
-  
-  .rad-input:checked~.rad-text {
-    color:#210242;
-  }
-  
-  
-  /* ABS */
-  /* ====================================================== */
-  .abs-site-link {
-    position: fixed;
-    bottom: 40px;
-    left: 20px;
-    color: hsla(0, 0%, 0%, .5);
-    font-size: 16px;
-  }
