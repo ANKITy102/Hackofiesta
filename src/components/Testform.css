@@ -20,7 +20,7 @@
   backdrop-filter: blur(2rem);
   background: linear-gradient(91.31deg, #5E00C0 0.56%, #A67AD6 101.54%);
   left: 30vw;
-  opacity: 0;
+  opacity: 1;
   /* transform: scale(0.4); */
   /* transition: opacity 3s ease-in; */
 

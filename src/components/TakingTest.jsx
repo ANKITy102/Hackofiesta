@@ -1,15 +1,19 @@
 import React, { useEffect, useState, useRef } from "react";
+// import { useHistory } from "react-router-dom";
 import "./TakingTest.css";
 import "./MyForm.css";
+import "./Result.css";
+import { Link } from "react-router-dom";
+import imgg from "../assets/audiogif.gif";
 const mimeType = "audio/mpeg";
-export default function TakingTest() {
+export default function TakingTest(props) {
   useEffect(() => {
     // Do something when the component is mounted or updated
     document.getElementById("testformBig").style.display = "none";
     document.body.style.height = "normal";
     document.body.style.overflowY = "auto";
   }, []);
-
+  const [show, setShow] = useState(0);
   const [permission, setPermission] = useState(false);
   const mediaRecorder = useRef(null);
   const [recordingStatus, setRecordingStatus] = useState("inactive");
@@ -32,18 +36,32 @@ export default function TakingTest() {
       body: formData,
     });
     // console.log(out)
-    console.log("hellohgh");
-    let response = await outcome.json();
-    console.log("hello2");
-    console.log(response);
-    console.log("hello3");
+    // let ;
+    // console.log("hello2");
+    // console.log(response);
+    // console.log("hello3");
 
     // let outcome = await fetch("http://localhost:5000/predict");
-    // let data = await outcome.json();
-    // console.log(data);
+    let data = await outcome.json();
+
+    // console.log(data.Jitter_DDP);
+    const r1 = data.Jitter_DDP;
+    const r2 = data.MDVP_PPQ;
+    const r3 = data.MDVP_RAP;
+    const r4 = data.MDVP_Jitter;
+    const r5 = data.MDVP_Jitter12;
+    const r6 = data.MDVP_Flo;
+    const r7 = data.Fhi;
+    const r8 = data.MDVP_Fo;
+    const r9 = data.result;
+    props.setTestData(r1, r2, r3, r4, r5, r6, r7, r8, r9);
+    document.getElementById("takeToResult").click();
+    // const history = useHistory();
+    // history.push("/Result");
   };
   const startRecording = async () => {
     setAudio(null);
+    setShow(1);
     if ("MediaRecorder" in window) {
       try {
         const streamData = await navigator.mediaDevices.getUserMedia({
@@ -78,6 +96,7 @@ export default function TakingTest() {
     //stops the recording instance
     mediaRecorder.current.stop();
     mediaRecorder.current.onstop = () => {
+      setShow(0);
       //creates a blob file from the audiochunks data
       const audioBlob = new Blob(audioChunks, { type: mimeType });
       //creates a playable URL from the blob file.
@@ -95,7 +114,7 @@ export default function TakingTest() {
     <div className="Test">
       <div className="instruction">
         <h2>
-          <i class="fa-solid fa-circle-exclamation"></i> Instructions
+          <i className="fa-solid fa-circle-exclamation"></i> Instructions
         </h2>
         <div className="para">
           <p>
@@ -120,8 +139,21 @@ export default function TakingTest() {
           style={{
             width: "75%",
             height: "46%",
+            display: "flex",
+            paddingLeft: "100px",
           }}
-        ></div>
+        >
+          {show ? (
+            <img
+              src={imgg}
+              alt=""
+              style={{
+                height: "100%",
+                width: "100%",
+              }}
+            />
+          ) : null}
+        </div>
         <div className="dkjfd">
           {audio ? (
             <div key={audio} className="AudioStyle">
@@ -159,7 +191,7 @@ export default function TakingTest() {
             onClick={startRecording}
           >
             <i
-              class="fa-solid fa-play"
+              className="fa-solid fa-play"
               style={{ color: "red", marginRight: "5px" }}
             ></i>{" "}
             Start Recording
@@ -179,7 +211,7 @@ export default function TakingTest() {
             onClick={stopRecording}
           >
             <i
-              class="fa-solid fa-pause"
+              className="fa-solid fa-pause"
               style={{ color: "green", marginRight: "5px" }}
             ></i>{" "}
             Pause Recording
@@ -194,6 +226,16 @@ export default function TakingTest() {
           Get Result
         </button>
       </div>
+      <Link
+        to="/Result"
+        style={{
+          position: "fixed",
+          opacity: "0",
+        }}
+        id="takeToResult"
+      >
+        Result
+      </Link>
     </div>
   );
 }

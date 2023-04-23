@@ -3,6 +3,7 @@ import "./AboutMe.css";
 
 export default function AboutMe(props) {
   return (
+    // <div className="aboutme" id="aboutUsContainer">
     <div class="aboutme" key={props.key} id="aboutUsContainer">
       <img className="aboutme--img" src={props.src} alt="ProfilePic" />
       <div className="aboutme--text">

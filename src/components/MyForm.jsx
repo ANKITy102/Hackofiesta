@@ -26,11 +26,11 @@ const AudioRecorder = () => {
         "Access-Control-Allow-Origin": "*",
       },
       body: formData,
-      mode: "no-cors",
     });
     // console.log(out)
-    let response = await outcome.json();
-    console.log(response);
+    console.log(outcome)
+    // let response = await outcome.json();
+    // console.log(response);
     // let outcome = await fetch("http://localhost:5000/predict");
     // let data = await outcome.json();
     // console.log(data);

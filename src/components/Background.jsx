@@ -81,7 +81,7 @@ export default function Background(props) {
           to="/Test"
           onClick={getDeform}
         >
-          Take Test <div class="dot"></div>
+          Take Test <div className="dot"></div>
         </Link>
         <img
           className="bg--img1"

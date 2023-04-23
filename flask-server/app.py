@@ -106,11 +106,11 @@ def extract_features(audio_file):
                                     'MDVP:Shimmer', 'MDVP:Shimmer(dB)', 'Shimmer:APQ3', 'Shimmer:APQ5',
                                     'MDVP:APQ', 'Shimmer:DDA', 'NHR', 'HNR', 'RPDE'])
     fe = fe[0]
-    result = PDetect.predict(dff)
-    resp = {'MDVP:Fo(Hz)': fe[0], 'MDVP:Fhi(Hz)': fe[1], 'MDVP:Flo(Hz)':fe[2], 'MDVP:Jitter(%)': fe[3],
-                                    'MDVP:Jitter(Abs)': fe[4], 'MDVP:RAP':fe[5], 'MDVP:PPQ':fe[6], 'Jitter:DDP':fe[7],}
-    # print(type (resp))
-    return  str(result)
+    result = PDetect.predict(dff)[0]
+    resp = {'result': str(result), 'MDVP_Fo(Hz)': fe[0], 'MDVP_Fhi': fe[1], 'MDVP_Flo':fe[2], 'MDVP_Jitter12': fe[3],
+                                    'MDVP_Jitter': fe[4], 'MDVP_RAP':fe[5], 'MDVP_PPQ':fe[6], 'Jitter_DDP':fe[7],}
+    print(resp)
+    return resp
     # print( type (str(result)))
     # return str(result)
 
@@ -125,7 +125,7 @@ def predict():
     audio_file.close()
     # print(os.listdir())
     print("--------------")
-    return Response(extract_features('temp.mpeg'))
+    return jsonify(extract_features('temp.mpeg'))
 
 
 if __name__ == "__main__":

@@ -110,14 +110,14 @@ export default function Header(props) {
         <div className="Gender">
           <span>Gender</span>
           <div className="sex">
-            <label for="male">
+            <label htmlFor="male">
               <input type="radio" id="male" value="Male" name="sex" /> Male
             </label>
-            <label for="female">
+            <label htmlFor="female">
               <input type="radio" id="female" value="Female" name="sex" />{" "}
               Female
             </label>
-            <label for="others">
+            <label htmlFor="others">
               <input type="radio" id="others" value="Others" name="sex" />{" "}
               Others
             </label>
