@@ -6,6 +6,7 @@ import Background from './components/Background'
 import About from './components/About'
 import Testform from './components/Testform'
 import TakingTest from './components/TakingTest'
+import Result from './components/Result'
 
 import {
   BrowserRouter as Router,
@@ -22,7 +23,7 @@ function App() {
       <Header/>
       <Routes>
       <Route path="/" element={<><Heroo /><Background /><About /></>}/>
-      <Route path="Test" element={<><Testform /><TakingTest/></>}/>
+      <Route path="Test" element={<><Testform /><TakingTest/><Result uname="Shubham Roy" ugender="male" uage="18" val="90" result="0" /></>}/>
       </Routes>
       <Footer/>
     </div>

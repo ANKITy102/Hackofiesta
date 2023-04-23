@@ -27,16 +27,19 @@ export default function Header() {
       document.body.style.overflowY="auto"
       window.scrollTo(0,0); 
   }
+  const toggleMenu3=()=>{
+      window.scrollTo(0,0); 
+  }
  
   return (
     <>
     <header>
       <img src="src\assets\images\tp-removebg-preview.png" alt="myLogo" />
       <ul>
-        <li className="navbarLink"><Link to="/">Home</Link></li>
-        <li className="navbarLink"><Link to="/Test">Test</Link></li>
-        <li className="navbarLink"><Link to="/Background" smooth>Background</Link></li>
-        <li className="navbarLink"><Link to="/About">About</Link></li>
+        <li className="navbarLink"><Link onClick={toggleMenu3} to="/">Home</Link></li>
+        <li className="navbarLink"><Link onClick={toggleMenu3} to="/Test">Test</Link></li>
+        <li className="navbarLink"><Link onClick={toggleMenu3} to="/Background" smooth>Background</Link></li>
+        <li className="navbarLink"><Link onClick={toggleMenu3} to="/About">About</Link></li>
         <div id="nav-icon1" onClick={toggleMenu}>
           <span></span>
           <span></span>
