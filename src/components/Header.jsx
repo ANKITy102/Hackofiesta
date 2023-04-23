@@ -13,14 +13,10 @@ export default function Header() {
      document.body.style.overflow="hidden"
       
       setWidth('100vw')
-      setOpacity('1')
-      setIsOpen(1);
     }
     else{
       setWidth('0');
-      setOpacity('0')
-      setIsOpen(0);
-      document.body.style.height="fit-content"
+      document.body.style.height="normal"
       document.body.style.overflowY="auto"
     }
   }
