@@ -136,3 +136,17 @@ def predict():
 
 if __name__ == "__main__":
     app.run(host='localhost', port=5000, debug=True)
+
+
+
+# i=1
+# on saving that file
+# file.save(f"audio{i}")
+
+# audio(3).mpeg
+
+# import re
+# try to to identufy (/d), replace it with ""
+# audio.mpeg
+# and the old file will get re[laced
+#                              ]
