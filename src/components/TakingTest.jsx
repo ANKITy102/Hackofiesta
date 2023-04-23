@@ -3,12 +3,12 @@ import "./TakingTest.css";
 import "./MyForm.css";
 const mimeType = "audio/mpeg";
 export default function TakingTest() {
-  // useEffect(() => {
-  //   // Do something when the component is mounted or updated
-  //   document.getElementById("testformBig").style.display = "none";
-  //   document.body.style.height = "normal";
-  //   document.body.style.overflowY = "auto";
-  // }, []);
+  useEffect(() => {
+    // Do something when the component is mounted or updated
+    document.getElementById("testformBig").style.display = "none";
+    document.body.style.height = "normal";
+    document.body.style.overflowY = "auto";
+  }, []);
 
   const [permission, setPermission] = useState(false);
   const mediaRecorder = useRef(null);
@@ -30,7 +30,6 @@ export default function TakingTest() {
         "Access-Control-Allow-Origin": "*",
       },
       body: formData,
-      mode: "no-cors",
     });
     // console.log(out)
     console.log("hellohgh");

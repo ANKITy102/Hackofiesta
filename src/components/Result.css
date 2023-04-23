@@ -1,0 +1,86 @@
+.result{
+    background-color: #A67AD6;
+    color: white;
+    width: 60%;
+    margin: 50px auto;
+    border-radius: 40px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.result_logo_background{
+    width: 60%;
+    position: absolute;
+    top: 150px;
+    left: 20%;
+    right: 20%;
+    z-index: 0;
+}
+.result_logo{
+    width: 25%;
+    margin-top: 30px;
+    margin-bottom: 10px;
+}
+.green{
+    color: rgb(57, 203, 57);
+}
+.red{
+    color: rgb(201, 45, 45);
+}
+.result--data{
+    width: 60%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 50px;
+}
+.result h1{
+    font-size: 5vw;
+    margin-bottom: 30px;
+}
+.result--info{
+    width: 80%;
+    text-align: left;
+    font-size: 24px;
+    margin-bottom: 50px;
+}
+.result h2{
+    font-size: 2.4vw;
+    margin-bottom: 30px;
+    font-weight: 500;
+}
+.result--data .rep{
+    font-size: 1.2vw;
+}
+.result--download{
+    margin-bottom: 50px;
+    color: white;
+    background-color: #F5CC39;
+    border: none;
+    border-radius: 16px;
+    width: 180px;
+    height: 50px;
+    font-size: 24px;
+}
+
+@media all and (max-width: 769px){
+    .result{
+        width: 80%;
+        border-radius: 40px;
+    }
+    .result h2{
+        font-size: 3.2vw;
+    }
+    .result--data{
+        width: 100%;
+        justify-content: space-around;
+    }
+    .result--data .rep{
+        font-size: 2.4vw;
+    }
+    .result p{
+        font-size: 16px;
+    }
+}

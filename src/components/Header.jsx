@@ -41,15 +41,16 @@ export default function Header(props) {
   };
   const testClick = (event) => {
     event.preventDefault();
-    setdisplaySt("flex");
-    myRef.current.style.opacity = "1";
+    // setdisplaySt("flex");
+    document.getElementById("testformBig").style.display = "flex";
+
     document.body.style.height = "100vh";
     document.body.style.overflow = "hidden";
   };
   const testCloseBtn = () => {
     // document.getElementById("testformBig").style.transform = "scale(0.4)";
-    myRef.current.style.opacity = "1";
-    setdisplaySt("none");
+
+    document.getElementById("testformBig").style.display = "none";
     document.body.style.height = "normal";
     document.body.style.overflowY = "auto";
   };
@@ -123,7 +124,9 @@ export default function Header(props) {
           </div>
         </div>
         <input className="Age" type="number" max="125" placeholder="Age" />
-        <Link to="/TakingTest">Start Test</Link>
+        <Link to="/TakingTest" className="button">
+          Start Test
+        </Link>
       </div>
 
       <div className="sideMenu" style={{ width: `${width}` }}>

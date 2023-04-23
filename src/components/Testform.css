@@ -38,7 +38,7 @@
   transition: all 0.15s;
   box-sizing: border-box;
 }
-.testform button{
+.testform .button{
   color: #8114f6;
   background-color: #FFFFFF;
   border: none;
@@ -46,6 +46,8 @@
   height: 40px;
   border-radius: 16px;
   font-size: 23px;
+  text-decoration: none;
+  text-align: center;
 }
 .testform .Name:focus,
 .testform .Age:focus {
@@ -86,7 +88,7 @@
     width: 80%;
     height: 40px;
   }
-  .testform button{
+  .testform .button{
     width: 150px;
     height: 40px;
     font-size: 18px;

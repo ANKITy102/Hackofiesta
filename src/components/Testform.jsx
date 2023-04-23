@@ -1,7 +1,9 @@
-import React from "react";
+import React,{ useEffect } from "react";
 import "./Testform.css";
+
 import { Link } from "react-router-dom";
 export default function Testform() {
+
   return (
     <div className="testform">
       
