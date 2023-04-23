@@ -1,4 +1,5 @@
 import { useState, useRef } from "react";
+import { loadStripe } from "@stripe/stripe-js";
 import { saveAs } from "file-saver";
 import "./MyForm.css";
 const mimeType = "audio/mpeg";
@@ -14,23 +15,29 @@ const AudioRecorder = () => {
   const handleSubmit = async (event) => {
     event.preventDefault();
     console.log("hello");
+    const stripePromise = loadStripe("sk_test_51Mzw7OSFRSke1rqTlNafZAhvQXXxmXtciwgiAVytF7fUyizH6N1soL1nG5trme3pKZhYdzCxtBWiTN2YWVT99Y4j00Ku8INCHd")
     // console.log(file);
     // if (file === null) {
     //   return;
     // }
-
-    // let formData = new FormData();
-    // formData.append("files", reccordeddBob);
-    // let outcome = await fetch("http://localhost:5000/predict", {
-    //   method: "POST",
-    //   headers: {
-    //     "Access-Control-Allow-Origin": "*",
-    //   },
-    //   body: formData,
-    // });
-    let outcome = await fetch("http://localhost:5000/predict");
-    let data = await outcome.json();
-    console.log(data);
+    const stripe = await stripePromise;
+    const paymentDone = await fetch("http://localhost:5000/create-checkout-session")
+    let formData = new FormData();
+    formData.append("files", reccordeddBob);
+    let outcome = await fetch("http://localhost:5000/predict", {
+      method: "POST",
+      headers: {
+        "Access-Control-Allow-Origin": "*",
+      },
+      body: formData,
+      mode: "no-cors",
+    });
+    // console.log(out)
+    let response = await outcome.json();
+    console.log(response);
+    // let outcome = await fetch("http://localhost:5000/predict");
+    // let data = await outcome.json();
+    // console.log(data);
   };
   const startRecording = async () => {
     setAudio(null);
@@ -77,9 +84,14 @@ const AudioRecorder = () => {
       setRecordedBlob(audioBlob);
       setFile(audioUrl);
       // const filePath = "temp.mpeg";
-      saveAs(audioBlob, "temp.mpeg");
+      // saveAs(audioBlob, "temp.mpeg");
     };
   };
+  function makeid(length) {
+    let arr = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+    let id = "";
+    for (let i = 0; i < length; i++) {}
+  }
   // const handleSubmit=()=>{
   //     const audioInput = document.getElementById("audio-input");
   //     audioInput.value = audioSrc;
@@ -103,7 +115,6 @@ const AudioRecorder = () => {
                   onClick={startRecording}
                   type="button"
                   className="custom-btn btn-11"
-                  style={{ margin: "30px", fontSize: "15px" }}
                 >
                   Start Recording
                 </button>
@@ -111,7 +122,6 @@ const AudioRecorder = () => {
                   onClick={handleSubmit}
                   type="button"
                   className="custom-btn btn-11"
-                  style={{ margin: "20px", fontSize: "20px" }}
                 >
                   Test
                 </button>
@@ -130,94 +140,30 @@ const AudioRecorder = () => {
                   onClick={handleSubmit}
                   type="button"
                   className="custom-btn btn-11"
-                  style={{ margin: "30px", fontSize: "30px" }}
                 >
                   Test
                 </button>
               </>
             ) : null}
             {audio ? (
-              <div className="AudioStyle">
+              <div key={audio} className="AudioStyle">
                 <div className="container-audio">
                   <audio controls loop autoPlay>
                     <source src={audio} type="audio/webm" />
                     Your browser dose not Support the audio Tag
                   </audio>
                 </div>
-
+              </div>
+            ) : (
+              <div key={null} className="AudioStyle">
                 <div className="container-audio">
-                  <div className="colum1">
-                    <div className="row"></div>
-                  </div>
-                  <div className="colum1">
-                    <div className="row"></div>
-                  </div>
-                  <div className="colum1">
-                    <div className="row"></div>
-                  </div>
-                  <div className="colum1">
-                    <div className="row"></div>
-                  </div>
-                  <div className="colum1">
-                    <div className="row"></div>
-                  </div>
-                  <div className="colum1">
-                    <div className="row"></div>
-                  </div>
-                  <div className="colum1">
-                    <div className="row"></div>
-                  </div>
-                  <div className="colum1">
-                    <div className="row"></div>
-                  </div>
-                  <div className="colum1">
-                    <div className="row"></div>
-                  </div>
-                  <div className="colum1">
-                    <div className="row"></div>
-                  </div>
-                  <div className="colum1">
-                    <div className="row"></div>
-                  </div>
-                  <div className="colum1">
-                    <div className="row"></div>
-                  </div>
-                  <div className="colum1">
-                    <div className="row"></div>
-                  </div>
-                  <div className="colum1">
-                    <div className="row"></div>
-                  </div>
-                  <div className="colum1">
-                    <div className="row"></div>
-                  </div>
-                  <div className="colum1">
-                    <div className="row"></div>
-                  </div>
-                  <div className="colum1">
-                    <div className="row"></div>
-                  </div>
-                  <div className="colum1">
-                    <div className="row"></div>
-                  </div>
-                  <div className="colum1">
-                    <div className="row"></div>
-                  </div>
-                  <div className="colum1">
-                    <div className="row"></div>
-                  </div>
-                  <div className="colum1">
-                    <div className="row"></div>
-                  </div>
-                  <div className="colum1">
-                    <div className="row"></div>
-                  </div>
-                  <div className="colum1">
-                    <div className="row"></div>
-                  </div>
+                  <audio controls loop autoPlay>
+                    <source src={audio} type="audio/webm" />
+                    Your browser dose not Support the audio Tag
+                  </audio>
                 </div>
               </div>
-            ) : null}
+            )}
           </div>
         </div>
         <div className="leftAudioCont"></div>

@@ -7,13 +7,22 @@
   "scripts": {
     "dev": "vite --host",
     "build": "vite build",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "start": "node server.js"
   },
   "dependencies": {
+    "@stripe/react-stripe-js": "^1.0.0",
+    "@stripe/stripe-js": "^1.0.0",
+    "axios": "^1.3.6",
+    "crypto": "^1.0.1",
+    "dotenv": "^16.0.3",
+    "express": "^4.18.2",
     "file-saver": "^2.0.5",
     "fs": "^0.0.1-security",
     "localforage": "^1.10.0",
     "match-sorter": "^6.3.1",
+    "mongoose": "^7.0.4",
+    "razorpay": "^2.8.6",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-router-dom": "^6.10.0",
@@ -24,5 +33,9 @@
     "@types/react-dom": "^18.0.11",
     "@vitejs/plugin-react": "^3.1.0",
     "vite": "^4.2.0"
-  }
+  },
+  "description": "Ankit,Subham,Anurag,Darsh",
+  "main": "server.js",
+  "author": "",
+  "license": "ISC"
 }

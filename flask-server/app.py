@@ -1,4 +1,4 @@
-from flask import Flask, render_template, request, Response, jsonify
+from flask import Flask, render_template,redirect, request, Response, jsonify
 from flask_cors import CORS, cross_origin
 # from sklearn.externals import joblib
 import numpy as np
@@ -6,14 +6,14 @@ import pandas as pd
 import librosa
 import pickle
 import os
-import json
-
+# import json
 
 app = Flask(__name__)
 CORS(app)
 # app.config['CORS_HEADERS'] = 'Content-Type'
 # CORS(app, origins='localhost')
-
+# This is your test secret API key.
+# payment method
 file = open('PDmodel.pkl', 'rb')
 PDetect = pickle.load(file)
 
@@ -110,28 +110,20 @@ def extract_features(audio_file):
     resp = {'MDVP:Fo(Hz)': fe[0], 'MDVP:Fhi(Hz)': fe[1], 'MDVP:Flo(Hz)':fe[2], 'MDVP:Jitter(%)': fe[3],
                                     'MDVP:Jitter(Abs)': fe[4], 'MDVP:RAP':fe[5], 'MDVP:PPQ':fe[6], 'Jitter:DDP':fe[7],}
     print(type (resp))
-    # print("====", str(resp))
-    # fe_json = json.dumps({"features": fe})
-    # res = {"features": fe_json}
-    # print(res)
-
     return str(result)
 
 
-@app.route('/predict')
+@app.route('/predict', methods=['POST'])
 # @cross_origin()
 def predict():
 
     # print('-----')
-    # audio_file = request.files.get('files')
-    # audio_file.save('temp.mpeg')
+    audio_file = request.files.get('files')
+    audio_file.save('temp.mpeg')
+    audio_file.close()
     # print(os.listdir())
     print("--------------")
     return Response(extract_features('temp.mpeg'))
-    # return Response('0k')
-    # return respo
-    # print(respo)
-    # return respo
 
 
 if __name__ == "__main__":
@@ -139,14 +131,3 @@ if __name__ == "__main__":
 
 
 
-# i=1
-# on saving that file
-# file.save(f"audio{i}")
-
-# audio(3).mpeg
-
-# import re
-# try to to identufy (/d), replace it with ""
-# audio.mpeg
-# and the old file will get re[laced
-#                              ]
