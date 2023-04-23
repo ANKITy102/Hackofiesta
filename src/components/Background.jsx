@@ -1,11 +1,16 @@
 import React from "react";
 import "./Background.css";
-import { Link } from "react-router-dom";
 
-export default function Background() {
+import { Link } from "react-scroll";
+
+export default function Background(props) {
+  const getDeform = (event) => {
+    event.preventDefault();
+    document.getElementById("getFormFromthis").click();
+  };
   return (
     <>
-      <div className="background1" id="Background">
+      <div className="background1" id="Backgroundddd">
         <div className="bg1--e1">
           <img
             className="bg1--e1--p1"
@@ -71,7 +76,11 @@ export default function Background() {
             patients in the developing countries.
           </span>
         </div>
-        <Link className="bg--custom-btn bg--btn-11" to="/Test">
+        <Link
+          className="bg--custom-btn bg--btn-11"
+          to="/Test"
+          onClick={getDeform}
+        >
           Take Test <div class="dot"></div>
         </Link>
         <img

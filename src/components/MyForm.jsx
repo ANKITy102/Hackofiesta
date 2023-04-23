@@ -13,15 +13,11 @@ const AudioRecorder = () => {
   const [file, setFile] = useState(null);
   const [reccordeddBob, setRecordedBlob] = useState(null);
   const handleSubmit = async (event) => {
-    event.preventDefault();
-    console.log("hello");
-    const stripePromise = loadStripe("sk_test_51Mzw7OSFRSke1rqTlNafZAhvQXXxmXtciwgiAVytF7fUyizH6N1soL1nG5trme3pKZhYdzCxtBWiTN2YWVT99Y4j00Ku8INCHd")
     // console.log(file);
     // if (file === null) {
     //   return;
     // }
-    const stripe = await stripePromise;
-    const paymentDone = await fetch("http://localhost:5000/create-checkout-session")
+
     let formData = new FormData();
     formData.append("files", reccordeddBob);
     let outcome = await fetch("http://localhost:5000/predict", {

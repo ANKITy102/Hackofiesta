@@ -29,6 +29,7 @@
 .heroo--custom-btn {
   transform: translate(20%,120%);
   color: #fff;
+  margin-left: 5vw;
   text-decoration: none;
   border-radius: 5px;
   padding: 10px 40px;
@@ -44,7 +45,7 @@
  7px 7px 20px 0px rgba(0,0,0,.1),
  4px 4px 5px 0px rgba(0,0,0,.1);
   outline: none;
-  font-size: 32px;
+  font-size: 40px;
 }
 .heroo--btn-11 {
   border: none;
@@ -103,12 +104,23 @@
     height: 50%;
   }
   .heroo--custom-btn {
-    transform: translate(50%,80%);
-    padding: 6px 24px;
-    margin-right: auto;
+    transform: translate(0,0);
+    display: block;
+    width: 40%;
     margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    margin-top: 40px;
+    padding: 6px 24px;
+    font-size: 24px;
   }
   .heroo--bottom{
     font-size: 16px; 
+  }
+}
+@media all and (max-width: 385px){
+  .heroo--custom-btn {
+    width: 60%;
+    font-size: 18px;
   }
 }

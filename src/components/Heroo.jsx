@@ -1,21 +1,43 @@
-import React from 'react'
-import "./Heroo.css"
-import { Link } from 'react-router-dom'
+import React from "react";
+import "./Heroo.css";
+import { Link } from "react-router-dom";
 
-
-export default function Heroo() {
+export default function Heroo(props) {
+  const getDeform = (event) => {
+    event.preventDefault();
+    document.getElementById("getFormFromthis").click();
+  };
   return (
     <>
-    <div className="heroo" id="Heroo">
-      <div className="heroo--text">
-        <img className="heroo--imgtext" src="src\assets\images\hero_heading.png" alt="HeroHeading" />
-        <Link className="heroo--custom-btn heroo--btn-11" to="/Test">Take Test</Link>
+      <div className="heroo" id="Heroo">
+        <div className="heroo--text">
+          <img
+            className="heroo--imgtext"
+            src="src\assets\images\hero_heading.png"
+            alt="HeroHeading"
+          />
+          <Link
+            className="heroo--custom-btn heroo--btn-11"
+            to="/Test"
+            onClick={getDeform}
+          >
+            Take Test
+          </Link>
+        </div>
+        <div className="heroo--imgdiv">
+          <img
+            className="heroo--img"
+            src="src\assets\images\hero_doctor.png"
+            alt="HeroDoctor"
+          />
+        </div>
       </div>
-      <div className="heroo--imgdiv">
-        <img className="heroo--img" src="src\assets\images\hero_doctor.png" alt="HeroDoctor" />
+      <div className="heroo--bottom">
+        Our AI-based Parkinson's detection website utilizes advanced machine
+        learning techniques to analyze Voice features and accurately identify
+        early-stage symptoms of the disease, allowing for early intervention and
+        improved patient outcomes.
       </div>
-    </div>
-    <div className="heroo--bottom">Our AI-based Parkinson's detection website utilizes advanced machine learning techniques to analyze Voice features and accurately identify early-stage symptoms of the disease, allowing for early intervention and improved patient outcomes.</div>
     </>
-  )
+  );
 }

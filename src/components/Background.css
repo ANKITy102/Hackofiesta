@@ -8,6 +8,10 @@
     justify-content: center;
     align-items: end;
     overflow: hidden;
+    
+}
+.bg1--e1{
+    margin-top: 40px;
 }
 .background2{
     color: #C19DE7;

@@ -1,46 +1,27 @@
 import React from "react";
 import "./Testform.css";
-// import "./Background.css";
 import { Link } from "react-router-dom";
 export default function Testform() {
   return (
-    <div className="testFormContainer">
-      <div className="testFormName">
-        <input type="text" placeholder="Name" />
-      </div>
-      <div className="testFormGender">
-        <div className="testFormGender1">Gender</div>
-        <div className="genderRadioButton">
-          <span>
-            <label class="rad-label">
-              <input type="radio" class="rad-input" name="rad" />
-              <div class="rad-design"></div>
-              <div class="rad-text">Male</div>
-            </label>
-          </span>
-          <span>
-            <label class="rad-label">
-              <input type="radio" class="rad-input" name="rad" />
-              <div class="rad-design"></div>
-              <div class="rad-text">Female</div>
-            </label>
-          </span>
-          <span>
-            <label class="rad-label">
-              <input type="radio" class="rad-input" name="rad" />
-              <div class="rad-design"></div>
-              <div class="rad-text">Other</div>
-            </label>
-          </span>
+    <div className="testform">
+      
+      <input className="Name" type="text" placeholder="Name" />
+      <div className="Gender">
+        <span>Gender</span>
+        <div className="sex">
+          <label for="male">
+            <input type="radio" id="male" value="Male" name="sex" /> Male
+          </label>
+          <label for="female">
+            <input type="radio" id="female" value="Female" name="sex" /> Female
+          </label>
+          <label for="others">
+            <input type="radio" id="others" value="Others" name="sex" /> Others
+          </label>
         </div>
-        {/* <hr /> */}
       </div>
-      <div className="testFormAge">
-        <input type="text" placeholder="Age" />
-      </div>
-      <div className="testFormButton">
-        <button>Start Test</button>
-      </div>
+      <input className="Age" type="number" max="125" placeholder="Age" />
+      <button>Start Test</button>
     </div>
   );
 }

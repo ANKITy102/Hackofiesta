@@ -107,9 +107,10 @@ def extract_features(audio_file):
                                     'MDVP:APQ', 'Shimmer:DDA', 'NHR', 'HNR', 'RPDE'])
     fe = fe[0]
     result = PDetect.predict(dff)
-    resp = {'MDVP:Fo(Hz)': fe[0], 'MDVP:Fhi(Hz)': fe[1], 'MDVP:Flo(Hz)':fe[2], 'MDVP:Jitter(%)': fe[3],
-                                    'MDVP:Jitter(Abs)': fe[4], 'MDVP:RAP':fe[5], 'MDVP:PPQ':fe[6], 'Jitter:DDP':fe[7],}
-    print(type (resp))
+    # resp = {'MDVP:Fo(Hz)': fe[0], 'MDVP:Fhi(Hz)': fe[1], 'MDVP:Flo(Hz)':fe[2], 'MDVP:Jitter(%)': fe[3],
+    #                                 'MDVP:Jitter(Abs)': fe[4], 'MDVP:RAP':fe[5], 'MDVP:PPQ':fe[6], 'Jitter:DDP':fe[7],}
+    # print(type (resp))
+    print( type (str(result)))
     return str(result)
 
 
