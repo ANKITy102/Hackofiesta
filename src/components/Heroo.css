@@ -106,6 +106,7 @@
     transform: translate(50%,80%);
     padding: 6px 24px;
     margin-right: auto;
+    margin-left: auto;
   }
   .heroo--bottom{
     font-size: 16px; 
